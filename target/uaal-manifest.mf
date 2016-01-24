@@ -1,0 +1,68 @@
+Manifest-Version: 1.0
+App-permissions-mw_bus_context-requirement: light sources---</title>--
+ -All changes for light sources.---</description>---@prefix ns: <http:
+ //ontology.universaal.org/Lighting.owl#> . @prefix : <http://www.w3.o
+ rg/2002/07/owl#> . _:BN000000 a <http://ontology.universAAL.org/Conte
+ xt.owl#ContextEventPattern> ; <http://www.w3.org/2000/01/rdf-schema#s
+ ubClassOf> [ a :Restriction ; :allValuesFrom ns:LightSource ; :onProp
+ erty <http://www.w3.org/1999/02/22-rdf-syntax-ns#subject> ] . ns:Ligh
+ tSource a :Class .---</serialization>---
+App-permissions-mw_bus_service-requirement: Get all light sources---</
+ title>---Get a list of all light sources.---</description>---@prefix 
+ ns: <http://ontology.igd.fhg.de/LightingConsumer.owl#> . @prefix pvn:
+  <http://ontology.universAAL.org/uAAL.owl#> . @prefix : <http://www.d
+ aml.org/services/owl-s/1.1/Process.owl#> . _:BN000000 a pvn:ServiceRe
+ quest ; pvn:requiredResult [ :withOutput ( [ a :OutputBinding ; :toPa
+ ram ns:controlledLamps ; :valueForm """ @prefix : <http://ontology.un
+ iversAAL.org/Service.owl#> . _:BN000000 a :PropertyPath ; :thePath ( 
+ <http://ontology.universaal.org/Lighting.owl#controls> ) . """^^<http
+ ://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral> ] ) ; a :Result ] 
+ ; pvn:requestedService [ a <http://ontology.universaal.org/Lighting.o
+ wl#Lighting> ] . ns:controlledLamps a :Output .---</serialization>---
+ Turn light source on---</title>---Turn on a specific light source.---
+ </description>---@prefix owl: <http://www.w3.org/2002/07/owl#> . @pre
+ fix ns: <http://ontology.universaal.org/Lighting.owl#> . @prefix pvn:
+  <http://ontology.universAAL.org/uAAL.owl#> . @prefix xsd: <http://ww
+ w.w3.org/2001/XMLSchema#> . @prefix ns1: <http://www.daml.org/service
+ s/owl-s/1.1/Process.owl#> . @prefix : <http://ontology.universAAL.org
+ /Service.owl#> . _:BN000000 a pvn:ServiceRequest ; pvn:requiredResult
+  [ a ns1:Result ; ns1:hasEffect ( [ :affectedProperty [ a :PropertyPa
+ th ; :thePath ( ns:controls ns:srcBrightness ) ] ; a :ChangeEffect ; 
+ :propertyValue "100"^^xsd:int ] ) ] ; pvn:requestedService [ a ns:Lig
+ hting ; pvn:instanceLevelRestrictions ( [ owl:hasValue [ :parameterCa
+ rdinality "1"^^xsd:int ; a ns1:Parameter ; ns1:parameterType "http://
+ ontology.universaal.org/Lighting.owl#LightSource"^^xsd:anyURI ] ; a o
+ wl:Restriction ; owl:onProperty ns:controls ] ) ; pvn:numberOfValueRe
+ strictions "1"^^xsd:int ] .---</serialization>---Turn light source of
+ f---</title>---Turn off a specific light source.---</description>---@
+ prefix owl: <http://www.w3.org/2002/07/owl#> . @prefix ns: <http://on
+ tology.universaal.org/Lighting.owl#> . @prefix pvn: <http://ontology.
+ universAAL.org/uAAL.owl#> . @prefix xsd: <http://www.w3.org/2001/XMLS
+ chema#> . @prefix ns1: <http://www.daml.org/services/owl-s/1.1/Proces
+ s.owl#> . @prefix : <http://ontology.universAAL.org/Service.owl#> . _
+ :BN000000 a pvn:ServiceRequest ; pvn:requiredResult [ a ns1:Result ; 
+ ns1:hasEffect ( [ :affectedProperty [ a :PropertyPath ; :thePath ( ns
+ :controls ns:srcBrightness ) ] ; a :ChangeEffect ; :propertyValue "0"
+ ^^xsd:int ] ) ] ; pvn:requestedService [ a ns:Lighting ; pvn:instance
+ LevelRestrictions ( [ owl:hasValue [ :parameterCardinality "1"^^xsd:i
+ nt ; a ns1:Parameter ; ns1:parameterType "http://ontology.universaal.
+ org/Lighting.owl#LightSource"^^xsd:anyURI ] ; a owl:Restriction ; owl
+ :onProperty ns:controls ] ) ; pvn:numberOfValueRestrictions "1"^^xsd:
+ int ] .---</serialization>---Dim light source---</title>---Dim a spec
+ ific light source to a given value.---</description>---@prefix owl: <
+ http://www.w3.org/2002/07/owl#> . @prefix ns: <http://ontology.univer
+ saal.org/Lighting.owl#> . @prefix pvn: <http://ontology.universAAL.or
+ g/uAAL.owl#> . @prefix xsd: <http://www.w3.org/2001/XMLSchema#> . @pr
+ efix ns1: <http://www.daml.org/services/owl-s/1.1/Process.owl#> . @pr
+ efix : <http://ontology.universAAL.org/Service.owl#> . _:BN000000 a p
+ vn:ServiceRequest ; pvn:requiredResult [ a ns1:Result ; ns1:hasEffect
+  ( [ :affectedProperty [ a :PropertyPath ; :thePath ( ns:controls ns:
+ srcBrightness ) ] ; a :ChangeEffect ; :propertyValue [ :parameterCard
+ inality "1"^^xsd:int ; a ns1:Parameter ; ns1:parameterType "http://ww
+ w.w3.org/2001/XMLSchema#int"^^xsd:anyURI ] ] ) ] ; pvn:requestedServi
+ ce [ a ns:Lighting ; pvn:instanceLevelRestrictions ( [ owl:hasValue [
+  :parameterCardinality "1"^^xsd:int ; a ns1:Parameter ; ns1:parameter
+ Type "http://ontology.universaal.org/Lighting.owl#LightSource"^^xsd:a
+ nyURI ] ; a owl:Restriction ; owl:onProperty ns:controls ] ) ; pvn:nu
+ mberOfValueRestrictions "1"^^xsd:int ] .---</serialization>---
+

@@ -1,0 +1,61 @@
+-------------------------------------------------------------------------------
+Test set: org.universAAL.samples.lighting.client.test.LightingIT
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 16.322 sec <<< FAILURE! - in org.universAAL.samples.lighting.client.test.LightingIT
+testComposite(org.universAAL.samples.lighting.client.test.LightingIT)  Time elapsed: 16.209 sec  <<< ERROR!
+org.osgi.framework.BundleException: Unresolved constraint in bundle com.sun.jersey.bundle [76]: Unable to resolve 76.0: missing requirement [76.0] osgi.wiring.package; (&(osgi.wiring.package=com.sun.grizzly.http)(version>=1.9.0)(!(version>=2.0.0)))
+	at org.apache.felix.framework.Felix.resolveBundleRevision(Felix.java:3974)
+	at org.apache.felix.framework.Felix.startBundle(Felix.java:2037)
+	at org.apache.felix.framework.BundleImpl.start(BundleImpl.java:955)
+	at org.apache.felix.framework.BundleImpl.start(BundleImpl.java:942)
+	at org.springframework.osgi.test.AbstractOsgiTests.startBundle(AbstractOsgiTests.java:341)
+	at org.springframework.osgi.test.AbstractOsgiTests.startup(AbstractOsgiTests.java:258)
+	at org.springframework.osgi.test.AbstractOsgiTests.prepareTestExecution(AbstractOsgiTests.java:374)
+	at org.springframework.osgi.test.AbstractOsgiTests.runBare(AbstractOsgiTests.java:203)
+	at org.springframework.osgi.test.AbstractOsgiTests$1.protect(AbstractOsgiTests.java:184)
+	at junit.framework.TestResult.runProtected(TestResult.java:124)
+	at org.springframework.osgi.test.AbstractOsgiTests.run(AbstractOsgiTests.java:181)
+	at junit.framework.TestSuite.runTest(TestSuite.java:230)
+	at junit.framework.TestSuite.run(TestSuite.java:225)
+	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:84)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:264)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:153)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:124)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:200)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:153)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+
+testOsgiPlatformStarts(org.universAAL.samples.lighting.client.test.LightingIT)  Time elapsed: 0 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at org.springframework.osgi.test.AbstractOsgiTests.invokeOSGiTestExecution(AbstractOsgiTests.java:395)
+	at org.springframework.osgi.test.AbstractOsgiTests.runBare(AbstractOsgiTests.java:206)
+	at org.springframework.osgi.test.AbstractOsgiTests$1.protect(AbstractOsgiTests.java:184)
+	at junit.framework.TestResult.runProtected(TestResult.java:124)
+	at org.springframework.osgi.test.AbstractOsgiTests.run(AbstractOsgiTests.java:181)
+	at junit.framework.TestSuite.runTest(TestSuite.java:230)
+	at junit.framework.TestSuite.run(TestSuite.java:225)
+	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:84)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:264)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:153)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:124)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:200)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:153)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+
+testLightingClient(org.universAAL.samples.lighting.client.test.LightingIT)  Time elapsed: 0 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at org.springframework.osgi.test.AbstractOsgiTests.invokeOSGiTestExecution(AbstractOsgiTests.java:395)
+	at org.springframework.osgi.test.AbstractOsgiTests.runBare(AbstractOsgiTests.java:206)
+	at org.springframework.osgi.test.AbstractOsgiTests$1.protect(AbstractOsgiTests.java:184)
+	at junit.framework.TestResult.runProtected(TestResult.java:124)
+	at org.springframework.osgi.test.AbstractOsgiTests.run(AbstractOsgiTests.java:181)
+	at junit.framework.TestSuite.runTest(TestSuite.java:230)
+	at junit.framework.TestSuite.run(TestSuite.java:225)
+	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:84)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:264)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:153)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:124)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:200)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:153)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+
