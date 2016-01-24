@@ -1,4 +1,4 @@
-package INLIFE_sample_application.src.main.java.org.universAAL.samples.lighting.client;
+package org.universAAL.samples.lighting.client;
 import com.sun.jersey.api.client.Client;
 import com.sun.jersey.api.client.ClientResponse;
 import com.sun.jersey.api.client.WebResource;
