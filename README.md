@@ -1,13 +1,13 @@
 # InLife-sample-application
-This is a sample application, which performs how to integrate a new AAL service into the IN LIFE platform. The sample application is based on the lighting example of the universAAL platform and translates a web page to a preferred language. More specifically, the application has a client UI which performs the execution of the service. The user enters a url and a preferred language, he selects the corresponding option of calling the trasnlator service. The result of the execution is presented in the eclipse console.
+This is a sample application, which performs how to integrate a new AAL service into the IN LIFE platform. The sample application is based on the lighting example of the universAAL platform and translates a web page to a preferred language. More specifically, the application has a client UI which performs the execution of the service. The user enters a url and a preferred language, he selects the corresponding option of calling the translator service. The result of the execution is presented in the eclipse console.
 
-Instructions for developers who want to build the code of the sample application themselves or just inspect it, but also for developers willing to implement their own applications over the INLIFE platform:
+Instructions for building the code of the sample application or integrate a new AAL service over the INLIFE platform:
 
 1) Install Java JDK
 
 Download Java JDK (not JRE) from http://www.oracle.com/technetwork/es/java/javase/downloads/index.html
 
-Versions: Currently Java 8 is not supported. The middleware is compatible with Java 1.5 and above, but different managers may require higher versions.
+Suggested version Java 7
 
 2) Install Maven
 
@@ -28,31 +28,32 @@ You can find an example file in https://github.com/universAAL/maven/tree/master/
 
 Any other Java IDE can be used as long as you can create OSGi bundles and handle Maven projects with it. UniversAAL recommends Eclipse IDE, and the instructions here refer to it. Download it from https://eclipse.org/downloads/
 
-If you plan to use the modeling and conversion tools from AAL Studio, you will need specifically Eclipse version 3.7.2.
+Suggested Eclipse version 3.7.2.
+
 Install Eclipse Plugins (optional)
 
 For building Maven projects, Maven integration in Eclipse is helpful. Latest versions of Eclipse usually already include this plugin. Plugin install site: http://download.eclipse.org/technology/m2e/releases .
 
-The AAL Studio is a set of uAAL-specific plugins. Plugin install site: http://depot.universaal.org/eclipse-update/ If you want the modelling tools, remember they require Eclipse 3.7.2.
-
 4) Download source code
 
-Clone a repository or check it out from https://github.com/universAAL.
+Clone a repository or check it out.
 
-Each repository usually contains several projects. Regular uAAL projects are Maven projects. Import them into Eclipse with: File > Import > Maven > Existing Maven Projects.
+Import them into Eclipse with: File > Import > Maven > Existing Maven Projects.
 
 5) Build the source code
 
-To compile the uAAL Maven projects you have to do a Maven install.
+To compile the Maven projects you have to do a Maven install.
 
 If you have the Eclipse Maven plugin, you can: right-click the project > Run as > Maven Install.
 If you installed standalone Maven, open a console command line, go to the folder that holds the POM.xml file of the project and type mvn install.
+
 
 Also, instructions regarding the installations could be found at:
 
 https://github.com/universAAL/platform/wiki/RD-Development-Environment
 
-After finishing with the installations:
+Specific instructions for building and running the sample application:
+
 1) start Eclipse with a new workspace
 
 2) download and import the sample application as "Existing Maven Projects"
@@ -61,7 +62,7 @@ After finishing with the installations:
 
 4) copy the configuration files; just copy the folder [rundir] (https://github.com/universAAL/distro.pax/tree/rundir) to the workspace directory, i.e. as c:\inlife\workspaces\sampleapplication\rundir.
 
-5) open the Run Configurations manager (select the entry "Run" from the top menu and then go for "Run Configurations..."). Select the Run Configuration named "Example-Lighting-LATEST_Complete_Original". When opening it you might see a dialog named "Resolve composites"; select "No". The dialog comes from the "uAAL Runner"-tab which mainly targets release versions and simplifies its usage. As the version in trunk is the latest development version, there can be problems when using it. Instead, we use the "Pax Runner"-tab where you can manually create the list of all bundles to start in the OSGi container. In this case, the list contains a so-called composite (the entry for smp.lighting.server.osgi). Composites are automatically generated for each universAAL project during the build and basically comprise a list of the bundle itself as well as all the dependencies. Together with the appropriate client the run configuration is complete with all the dependencies. The additional entry for tools.log_mon can be removed, if necessary; it starts a a tool called "Log Monitor" which listens to log messages and provides further information.
+5) open the Run Configurations manager. Select the Run Configuration named "Example-Lighting-LATEST_Complete_Original". When opening it you might see a dialog named "Resolve composites"; select "No".
 
 6)click the "Run"-button in the lower right of the Run Configurations manager and wait for the sample application to start. 
 
