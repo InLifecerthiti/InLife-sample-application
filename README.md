@@ -40,6 +40,10 @@ To compile the uAAL Maven projects you have to do a Maven install.
 If you have the Eclipse Maven plugin, you can: right-click the project > Run as > Maven Install.
 If you installed standalone Maven, open a console command line, go to the folder that holds the POM.xml file of the project and type mvn install.
 
+Also, instructions regarding the installations could be found at:
+
+https://github.com/universAAL/platform/wiki/RD-Development-Environment
+
 
 ## Funding Acknowledgement
 
