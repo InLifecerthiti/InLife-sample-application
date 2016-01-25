@@ -1,7 +1,7 @@
 # InLife-sample-application
-This is a sample application, which performs who to integrate a new AAL service into the IN LIFE platform.
+This is a sample application, which performs how to integrate a new AAL service into the IN LIFE platform. The sample application is based on the lighting example of the universAAL platform and translates a web page to a preferred language. More specifically, the application has a client UI which performs the execution of the service. The user enters a url and a preferred language, he selects the corresponding option of calling the trasnlator service. The result of the execution is presented in the eclipse console.
 
-Instructions for developers who want to build the code of the sample application themselves or just inspect it, but also  for developers willing to implement their own applications over the INLIFE platform:
+Instructions for developers who want to build the code of the sample application themselves or just inspect it, but also for developers willing to implement their own applications over the INLIFE platform:
 
 1) Install Java JDK
 
@@ -43,6 +43,8 @@ If you installed standalone Maven, open a console command line, go to the folder
 Also, instructions regarding the installations could be found at:
 
 https://github.com/universAAL/platform/wiki/RD-Development-Environment
+
+
 
 
 ## Funding Acknowledgement
