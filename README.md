@@ -13,18 +13,26 @@ Versions: Currently Java 8 is not supported. The middleware is compatible with J
 
 If Maven is not included in your IDE, you can install it standalone from http://maven.apache.org/download.cgi
 Once installed edit your settings.xml (typically in folder .m2 in your user folder) and add uAAL repositories to the <profile><repositories> section:
+
 http://depot.universaal.org/maven-repo/releases/
+
 http://depot.universaal.org/maven-repo/snapshots/
+
 http://depot.universaal.org/maven-repo/thirdparty/
+
 http://depot.universaal.org/maven-repo/thirdparty-snapshots/
+
 You can find an example file in https://github.com/universAAL/maven/tree/master/maven-repo-settings/settings.xml.
 
 3) Install Eclipse IDE
 
 Any other Java IDE can be used as long as you can create OSGi bundles and handle Maven projects with it. UniversAAL recommends Eclipse IDE, and the instructions here refer to it. Download it from https://eclipse.org/downloads/
+
 If you plan to use the modeling and conversion tools from AAL Studio, you will need specifically Eclipse version 3.7.2.
 Install Eclipse Plugins (optional)
+
 For building Maven projects, Maven integration in Eclipse is helpful. Latest versions of Eclipse usually already include this plugin. Plugin install site: http://download.eclipse.org/technology/m2e/releases .
+
 The AAL Studio is a set of uAAL-specific plugins. Plugin install site: http://depot.universaal.org/eclipse-update/ If you want the modelling tools, remember they require Eclipse 3.7.2.
 
 4) Download source code
@@ -44,8 +52,18 @@ Also, instructions regarding the installations could be found at:
 
 https://github.com/universAAL/platform/wiki/RD-Development-Environment
 
+After finishing with the installations:
+1) start Eclipse with a new workspace
 
+2) download and import the sample application as "Existing Maven Projects"
 
+3) compile the project by right-clicking the project and selecting Run As -> 8 Maven Install (which will print a line saying "BUILD SUCCESS" in the console)
+
+4) copy the configuration files; just copy the folder [rundir] (https://github.com/universAAL/distro.pax/tree/rundir) to the workspace directory, i.e. as c:\inlife\workspaces\sampleapplication\rundir.
+
+5) open the Run Configurations manager (select the entry "Run" from the top menu and then go for "Run Configurations..."). Select the Run Configuration named "Example-Lighting-LATEST_Complete_Original". When opening it you might see a dialog named "Resolve composites"; select "No". The dialog comes from the "uAAL Runner"-tab which mainly targets release versions and simplifies its usage. As the version in trunk is the latest development version, there can be problems when using it. Instead, we use the "Pax Runner"-tab where you can manually create the list of all bundles to start in the OSGi container. In this case, the list contains a so-called composite (the entry for smp.lighting.server.osgi). Composites are automatically generated for each universAAL project during the build and basically comprise a list of the bundle itself as well as all the dependencies. Together with the appropriate client the run configuration is complete with all the dependencies. The additional entry for tools.log_mon can be removed, if necessary; it starts a a tool called "Log Monitor" which listens to log messages and provides further information.
+
+6)click the "Run"-button in the lower right of the Run Configurations manager and wait for the sample application to start. 
 
 ## Funding Acknowledgement
 
